@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_listview_head_root"
+    >
+    <!-- 刷新和箭头图片-->
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+      >
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@drawable/common_listview_headview_red_arrow"
+            android:id="@+id/iv_listview_head_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ProgressBar
+            android:visibility="invisible"
+            android:indeterminateDrawable="@drawable/progressstyleshape"
+            android:id="@+id/pb_listview_head_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+    <!--状态信息展示-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:textColor="#ff0000"
+            android:textSize="20sp"
+            android:id="@+id/tv_listview_head_state_dec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下拉刷新"/>
+        <TextView
+            android:textColor="@android:color/darker_gray"
+            android:id="@+id/tv_listview_head_refersh_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2015-11-11 11:11:11"/>
+
+    </LinearLayout>
+
+</LinearLayout>
